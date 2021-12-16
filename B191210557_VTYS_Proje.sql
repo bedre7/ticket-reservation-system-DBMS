@@ -84,8 +84,8 @@ BEGIN
 	NEW."name" = LTRIM(NEW."name");
 	NEW."surname" = LTRIM(NEW."surname");
     NEW."surname" = UPPER(NEW."surname");
-    IF NEW."salary" < 2800 THEN
-            RAISE EXCEPTION 'Salary should be greater than Minimum wage - 2800₺';
+    IF NEW."salary" < 4250 THEN
+            RAISE EXCEPTION 'Salary should be greater than Minimum wage - 4250₺';
     END IF;
     RETURN NEW;
 END;
